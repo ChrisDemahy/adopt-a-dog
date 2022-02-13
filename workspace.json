@@ -1,6 +1,8 @@
 {
   "version": 2,
   "projects": {
+    "graphql-server": "apps/graphql-server",
+    "rest-server": "apps/rest-server",
     "web": "apps/web",
     "web-e2e": "apps/web-e2e"
   }
