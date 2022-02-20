@@ -46,6 +46,30 @@
         "jestConfig": "apps/rest-server/jest.config.js",
         "passWithNoTests": true
       }
+    },
+    "generate-migration": {
+      "builder": "@nrwl/workspace:run-commands",
+      "outputs": [],
+      "options": {
+        "command": "yarn ts-node --project apps/rest-server/tsconfig.app.json node_modules/.bin/typeorm -c rest-server migration:generate",
+        "cwd": "apps/rest-server"
+      }
+    },
+    "schema-sync": {
+      "builder": "@nrwl/workspace:run-commands",
+      "outputs": [],
+      "options": {
+        "command": "yarn ts-node --project apps/rest-server/tsconfig.app.json node_modules/.bin/typeorm -c rest-server schema:sync",
+        "cwd": "apps/rest-server"
+      }
+    },
+    "schema-drop": {
+      "builder": "@nrwl/workspace:run-commands",
+      "outputs": [],
+      "options": {
+        "command": "yarn ts-node --project apps/rest-server/tsconfig.app.json node_modules/.bin/typeorm -c rest-server schema:drop",
+        "cwd": "apps/rest-server"
+      }
     }
   },
   "tags": []

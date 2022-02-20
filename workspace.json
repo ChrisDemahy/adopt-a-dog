@@ -1,6 +1,7 @@
 {
   "version": 2,
   "projects": {
+    "entities": "libs/entities",
     "graphql-server": "apps/graphql-server",
     "rest-server": "apps/rest-server",
     "web": "apps/web",
